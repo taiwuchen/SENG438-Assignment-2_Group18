@@ -248,11 +248,38 @@ We used Mocking to test the methods in DataUtilities that use the interfaces Val
 
 # 4 How the team work/effort was divided and managed
 
-Text…
+We divided up the methods between us and each team member wrote unit tests for two or three methods. Then we pushed our code to GitHub and reviewed each other’s test cases. We each wrote tests for the following methods:
+
+**Azmath:**
+
+- *DataUtilities:* calculateColumnTotal & calculateRowTotal
+- *Range:* getLength
+
+**Abdul:**
+
+- *DataUtilities:*  getCumulativePercentages
+- *Range:* contains
+
+**Taiwu:**
+
+- *Data Utilities:* createNumberArray & createNumberArray2D
+- *Range:* toString
+
+**Hashir:**
+
+- *Data Utilities: N/A*
+- *Range: equals, constrain, intersects*
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
 
-Text…
+**Azmath:** It was a bit difficult coming up with the partitions and boundary values for testing some methods as the documentation was limited or unclear. So some things were left to the tester’s assumptions and understanding. For example, the documentation stated that for the calculateColumnTotal method, a total of zero will be returned for invalid inputs but then stated an InvalidParameterException is thrown if an invalid data object is passed in.
+
+**Abdul:** Specific to the getCumulativePercentages function, I found mocking one the KeyedValues object parameter to be complex. This is because there was no way to create and assign values to the object without seeing the code for it, meaning I had to mock all of its function calls. Similarly, I found writing unit tests for black box testing to be difficult and potentially counterproductive as I spent additional time mocking functions in which the function I am testing may never even call. This sometimes made it difficult to identify whether a test was failing due to how it was created or due to the function itself. The documentation was also slightly vague for this function as it did not specify what should happen in specific use cases. For example if the KeyedValues contained a negative value we do not know what the expected output of the function should be. Without this information, unit tests could not be written for it.
+
+**Taiwu:** I would say it was a bit more challenging than the first assignment; a lot more to learn, however. One thing I noticed was that certain methods’ testing would have multiple opinions on how to go about testing them, specifically createNumberArray. Overall, I personally learnt a lot and am looking forward to the upcoming assignments.
+
+**Hashir:** Theorizing boundary values and making sure all cases were covered was challenging. In the range class, there were several functions such as intersects and equals where I found bugs in scenarios that I had not considered earlier. I learned the importance of utilizing parameterized tests when working with redundant test cases. Both equals and intersects classes had two basic outcomes; true or false. By using parameterized tests, I was able to set up two general functions which were run through a dataset depending on their expected outcomes.
+
 
 # 6 Comments/feedback on the lab itself
 
