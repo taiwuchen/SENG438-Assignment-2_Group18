@@ -283,4 +283,11 @@ We divided up the methods between us and each team member wrote unit tests for t
 
 # 6 Comments/feedback on the lab itself
 
-Text…
+**Azmath:** Overall the lab was a good introduction to black-box testing, using JUnit and JMock. There were some discrepancies between the lab document and the JFreeChart SUT provided (for example: the number of methods specified in the lab document for Range versus how many were in the code files).
+
+**Abdul:** The lab was a great introduction to using JUnit and JMock. I appreciated that there were instructions on how to set up your eclipse environment for running unit tests. This displayed the benefits and drawbacks of black box testing and why it is needed.
+
+**Taiwu:** The lab itself was a great way to get started with automated testing using JUnit. I did find the instructions to be of great help overall.
+
+**Hashir:** I really enjoyed that lab as it gave a hands-on experience on testing a sizable system. I believe it helped me grasp the concepts of unit testing and gave me a good idea on how to test for external dependencies using mocking.
+
