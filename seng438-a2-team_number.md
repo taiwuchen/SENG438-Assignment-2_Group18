@@ -2,12 +2,14 @@
 
 **Lab. Report \#2 – Requirements-Based Test Generation**
 
-| Group \#:      |     |
-| -------------- | --- |
-| Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Group: 18      |
+|-----------------|
+| Abdul Rafay                |   
+| Mohammed Azmath Khan              |   
+| Taiwu Chen               |   
+| Hashir Naved                |   
+
+
 
 # 1 Introduction
 
