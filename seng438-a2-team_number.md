@@ -199,9 +199,7 @@ The following test cases were developed for methods in each class.
 
 **Class: Range**
 
-| Method | Test Case | Related Partition Number |
-| --- | --- | --- |
-| Method                                 | TestCase                               | Related Partition Number |
+| Method                                 | Test Case                              | Related Partition Number |
 |----------------------------------------|----------------------------------------|---|
 | combine                                | combine_both_ranges_null               |   |
 | combine                                | combine_one_range_null                 |   |
