@@ -201,46 +201,81 @@ The following test cases were developed for methods in each class.
 
 | Method | Test Case | Related Partition Number |
 | --- | --- | --- |
-| getLength | getLength_positiveIntegers | 1a |
-| getLength | getLength_negativeAndPositiveIntegers | 1b |
-| getLength | getLength_negativeAndPositiveDoubles | 1c |
-| getLength | getLength_largeNegativeAndPositive | 1d ii |
-| getLength | getLength_zero | 1d i |
-| contains | contains_frontRange | 2a |
-| contains | contains_endRange | 2b |
-| contains | contains_betweenRangePositive | 2c |
-| contains | contains_betweenRangeNegative | 2d |
-| contains | contains_outRangePositive | 2e |
-| contains | contains_outRangeNegative | 2f |
-| contains | contains_withinRangeDecimal | 2g |
-| toString | testBaseCase | 3a |
-| toString | edgecasePositivePositive | 3b |
-| toString | edgecaseNegativeNegative | 3c |
-| toString | edgecaseNegativePositive | 3d |
-| intersects | rangesShouldIntersect (parameter 0) | 4a |
-| intersects | rangesShouldIntersect (parameter 1) | 4b |
-| intersects | rangesShouldIntersect (parameter 2) | 4c |
-| intersects | rangesShouldIntersect (parameter 3) | 4d |
-| intersects | rangesShouldIntersect (parameter 4) | 4e |
-| intersects | rangesShouldIntersect (parameter 5) | 4h |
-| intersects | rangesShouldIntersect (parameter 6) | 4i |
-| intersects | rangesShouldIntersect (parameter 7) | 4j |
-| intersects | rangesShouldIntersect (parameter 8) | 4f |
-| intersects | rangesShouldNotIntersect (parameter 9) | 4g |
-| intersects | rangesShouldNotIntersect (parameter 10) | 4k |
-| equals | rangeShouldBeEqual (parameter 0) | 5a |
-| equals | rangeShouldNotBeEqual (parameter 1) | 5b |
-| equals | rangeShouldNotBeEqual (parameter 2) | 5c |
-| equals | rangeShouldNotBeEqual (parameter 3) | 5d |
-| equals | rangeShouldNotBeEqual (parameter 4) | 5g |
-| equals | rangeShouldNotBeEqual (parameter 5) | 5h |
-| equals | rangeShouldNotBeEqual (parameter 6) | 5e |
-| equals | rangeShouldNotBeEqual (parameter 7) | 5f |
-| constrain | constrainedInRange | 6a |
-| constrain | constrainedUpperBound | 6b |
-| constrain | constrainedLowerBound | 6c |
-| constrain | constrainedTowardLowerBound | 6e |
-| constrain | constrainedTowardUpperBound | 6d |
+| Method                                 | TestCase                               | Related Partition Number |
+|----------------------------------------|----------------------------------------|---|
+| combine                                | combine_both_ranges_null               |   |
+| combine                                | combine_one_range_null                 |   |
+| combine                                | combine_overlapping_ranges             |   |
+| combine                                | combine_disjoint_ranges                |   |
+| combine                                | combine_same_ranges                    |   |
+| constrain                              | constrain_valueBelowRange              |   |
+| constrain                              | constrain_valueWithinRange             |   |
+| constrain                              | constrain_valueAtLowerBound            |   |
+| constrain                              | constrain_valueAtUpperBound            |   |
+| constrain                              | constrain_valueAboveRange              |   |
+| contains                               | contains_valueBelowLower               |   |
+| contains                               | contains_valueEqualsLower              |   |
+| contains                               | contains_valueBetween                  |   |
+| contains                               | contains_valueEqualsUpper              |   |
+| contains                               | contains_valueAboveUpper               |   |
+| expandToInclude                        | expandToInclude_nullRange              |   |
+| expandToInclude                        | expandToInclude_valueInsideRange       |   |
+| expandToInclude                        | expandToInclude_valueBelowLower        |   |
+| expandToInclude                        | expandToInclude_valueAboveUpper        |   |
+| getCentralValue                        | getCentralValue_positiveRange          |   |
+| getCentralValue                        | getCentralValue_negativeAndPositive    |   |
+| getCentralValue                        | getCentralValue_zeroRange              |   |
+| getCentralValue                        | getCentralValue_largeRange             |   |
+| getCentralValue                        | getCentralValue_fractionalBounds       |   |
+| getLength                              | getLength_positiveRange                |   |
+| getLength                              | getLength_negativeAndPositive          |   |
+| getLength                              | getLength_zeroLength                   |   |
+| getLength                              | getLength_largeRange                   |   |
+| getLength                              | getLength_fractionalBounds             |   |
+| getLowerBound                          | getLowerBound_normalRange              |   |
+| getLowerBound                          | getLowerBound_negativeAndPositive      |   |
+| getLowerBound                          | getLowerBound_zeroRange                |   |
+| getLowerBound                          | getLowerBound_fractional               |   |
+| getLowerBound                          | getLowerBound_largeRange               |   |
+| getUpperBound                          | getUpperBound_normalRange              |   |
+| getUpperBound                          | getUpperBound_negativeAndPositive      |   |
+| getUpperBound                          | getUpperBound_zeroRange                |   |
+| getUpperBound                          | getUpperBound_fractional               |   |
+| getUpperBound                          | getUpperBound_largeRange               |   |
+| intersects                             | intersects_exactSameRange              |   |
+| intersects                             | intersects_partialOverlap              |   |
+| intersects                             | intersects_noOverlap                   |   |
+| intersects                             | intersects_boundaryTouch               |   |
+| intersects                             | intersects_reversedBounds              |   |
+| shift                                  | shift_positiveDelta                    |   |
+| shift                                  | shift_negativeDelta                    |   |
+| shift                                  | shift_zeroDelta                        |   |
+| shift                                  | shift_largeDelta                       |   |
+| shift                                  | shift_nullBase                         |   |
+| shift (allowZeroCrossing)              | shift_noZeroCrossing_false             |   |
+| shift (allowZeroCrossing)              | shift_crossZero_true                   |   |
+| shift (allowZeroCrossing)              | shift_noZeroCrossing_true              |   |
+| shift (allowZeroCrossing)              | shift_nullBase                         |   |
+| shift (allowZeroCrossing)              | shift_zeroDelta                        |   |
+| expand                                 | expand_positiveMargins                 |   |
+| expand                                 | expand_zeroMargins                     |   |
+| expand                                 | expand_negativeMargins                 |   |
+| expand                                 | expand_partialExpansion                |   |
+| expand                                 | expand_nullRange                       |   |
+| equals                                 | equals_sameBounds                      |   |
+| equals                                 | equals_diffLowerBound                  |   |
+| equals                                 | equals_diffUpperBound                  |   |
+| equals                                 | equals_null                            |   |
+| equals                                 | equals_differentClass                  |   |
+| hashCode                               | hashCode_equalRangesSameHash           |   |
+| hashCode                               | hashCode_differentRangesDifferentHash  |   |
+| hashCode                               | hashCode_repeatedCallsConsistent       |   |
+| toString                               | toString_positiveRange                 |   |
+| toString                               | toString_negativeRange                 |   |
+| toString                               | toString_zeroRange                     |   |
+| toString                               | toString_mixedRange                    |   |
+| toString                               | toString_fractionalBounds              |   |
+
 
 **Benefits and Drawbacks of Mocking**
 
