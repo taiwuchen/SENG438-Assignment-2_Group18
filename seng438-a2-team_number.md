@@ -217,17 +217,6 @@ The following test cases were developed for methods in each class.
 | toString | edgecasePositivePositive | 3b |
 | toString | edgecaseNegativeNegative | 3c |
 | toString | edgecaseNegativePositive | 3d |
-| intersects | rangesShouldIntersect (parameter 0) | 4a |
-| intersects | rangesShouldIntersect (parameter 1) | 4b |
-| intersects | rangesShouldIntersect (parameter 2) | 4c |
-| intersects | rangesShouldIntersect (parameter 3) | 4d |
-| intersects | rangesShouldIntersect (parameter 4) | 4e |
-| intersects | rangesShouldIntersect (parameter 5) | 4h |
-| intersects | rangesShouldIntersect (parameter 6) | 4i |
-| intersects | rangesShouldIntersect (parameter 7) | 4j |
-| intersects | rangesShouldIntersect (parameter 8) | 4f |
-| intersects | rangesShouldNotIntersect (parameter 9) | 4g |
-| intersects | rangesShouldNotIntersect (parameter 10) | 4k |
 | equals | rangeShouldBeEqual (parameter 0) | 5a |
 | equals | rangeShouldNotBeEqual (parameter 1) | 5b |
 | equals | rangeShouldNotBeEqual (parameter 2) | 5c |
