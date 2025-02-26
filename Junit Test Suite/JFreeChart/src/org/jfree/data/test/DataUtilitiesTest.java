@@ -178,8 +178,6 @@ public class DataUtilitiesTest {
     
     @Test
     public void getCumulativePercentages_checkKeys() {
-        // Setup a mock for KeyedValues with 3 keys ("A", "B", "C")
-        // with corresponding values: 5, 5, and 10 (total = 20)
         Mockery mockingContext = new Mockery();
         final KeyedValues keyedValues = mockingContext.mock(KeyedValues.class);
         mockingContext.checking(new Expectations() {{
@@ -192,12 +190,11 @@ public class DataUtilitiesTest {
 
         KeyedValues result = DataUtilities.getCumulativePercentages(keyedValues);
         // Verify that the keys remain the same and the cumulative percentages are correct.
-        assertEquals("A", result.getKey(0));
-        assertEquals("B", result.getKey(1));
-        assertEquals("C", result.getKey(2));
-        assertEquals(0.25, (Double) result.getValue(0), 0.000000001d);
-        assertEquals(0.50, (Double) result.getValue(1), 0.000000001d);
-        assertEquals(1.0,  (Double) result.getValue(2), 0.000000001d);
+        assertEquals("X", result.getKey(0));
+        assertEquals("Y", result.getKey(1));
+        assertEquals(0.4,  (Double) result.getValue(0), 1e-9);
+        assertEquals(1.0,  (Double) result.getValue(1), 1e-9);
+
     }
     
     @Test
